@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表界面</title>
+    <script th:src="@{/js/jquery-3.5.0.min.js}"></script>
+
+</head>
+<body>
+<h1>欢迎: </h1>
+<h2>用户列表:</h2>
+<div th:align="center">
+<table>
+    <tr>
+        <th>ID</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>操作</th>
+    </tr>
+    <tr th:each="user : ${users}" >
+        <td><span th:text="${user.id}"/></td>
+        <td><span th:text="${user.username}"/></td>
+        <td><span th:text="${user.password}"/></td>
+        <td>操作<</td>
+    </tr>
+</table>
+<hr>
+</div>
+</body>
+</html>
